@@ -17,3 +17,7 @@ First, create the Barcode field in the patient DocType. In this example, the fie
 
     def before_insert(self):
         self.patient_barcode = self.first_name
+
+Get the details of the logged in user and store it in the added_by field
+
+    self.added_by = frappe.session.user
