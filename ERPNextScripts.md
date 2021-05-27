@@ -21,3 +21,19 @@ First, create the Barcode field in the patient DocType. In this example, the fie
 Get the details of the logged in user and store it in the added_by field
 
     self.added_by = frappe.session.user
+    
+    
+
+Get the details of the logged in user and store it in the added_by field
+
+    frappe.ui.form.on('Vital Signs', {
+        setup: function(frm) {
+            frm.set_query("drug_allergy", function() {
+                return  {
+                    filters: {
+                        item_group: 'Reusable'
+                    }
+                }
+            });
+        }
+    });
