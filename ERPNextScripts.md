@@ -37,3 +37,7 @@ Frappe/ERPNext: Filter items, return only the ones with a belong to a specific g
             });
         }
     });
+    
+    
+Remove PoweredBy from footer
+       /home/frappe/frappe-bench/apps/erpnext/erpnext/templates/includes/footer/footer_powered.html
